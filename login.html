@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | Ely Loza</title>
+  <link rel="icon" type="image/x-icon" href="./src/img/favicon.svg" />
+  <link rel="stylesheet" href="./src/css/style.css" />
+  <link rel="stylesheet" href="./src/css/login-registration.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://kit.fontawesome.com/312f6279de.js" crossorigin="anonymous"></script>
+  <script src="./src/js/script.js"></script>
+</head>
+
+<body>
+  <div id="navigation-placeholder"></div>
+  <div class="wrapper flex align-items-center justify-content-center flex-wrap">
+    <div id="content" class="flex align-items-center justify-content-center flex-row flex-wrap">
+      <div id="login" class="grid">
+        <div class="form-header">
+          <h1>Login</h1>
+        </div>
+        <form action="#">
+          <div class="form grid gap-20">
+            <div class="text-input grid gap-20">
+              <input type="text" id="username" name="username" placeholder="Enter your username"
+                pattern="[A-Za-z0-9]{3,20}"
+                title="Username must contain only letters and numbers, and be 3-20 characters long." required>
+              <input type="password" id="password" name="password" placeholder="Enter your password"
+                onChange="onChange()" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                title="Password must be at least 8 characters long, and contain at least one number, one uppercase letter, and one lowercase letter."
+                required>
+            </div>
+            <div class="submit-input flex align-items-center justify-content-center">
+              <div class="gradient"><input type="submit" value="Login"></div>
+            </div>
+            <span>
+              <a class="underline" href="">Forgot your password?</a>
+              <p>Don't have an account yet? <span class="nowrap"><a class="underline" href="/portfolio/registration.html">Register
+                  now</a>.</span></p>
+            </span>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div id="footer-placeholder"></div>
+  </div>
+</body>
+
+</html>

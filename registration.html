@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Registration | Ely Loza</title>
+	<link rel="icon" type="image/x-icon" href="./src/img/favicon.svg" />
+	<link rel="stylesheet" href="./src/css/style.css" />
+	<link rel="stylesheet" href="./src/css/login-registration.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script src="https://kit.fontawesome.com/312f6279de.js" crossorigin="anonymous"></script>
+	<script src="./src/js/script.js"></script>
+</head>
+
+<body>
+	<div id="navigation-placeholder"></div>
+	<div class="wrapper flex align-items-center justify-content-center flex-wrap">
+		<div id="content" class="flex align-items-center justify-content-center flex-row flex-wrap">
+			<div id="register" class="grid">
+				<div class="form-header">
+					<h1>Register</h1>
+				</div>
+				<form action="#">
+					<div class="form grid gap-20">
+						<div class="text-input grid gap-20">
+							<div class="form-tile">
+								<label for="full_name" class="degular-medium">Full Name*</label>
+								<input type="text" id="full_name" name="full_name" placeholder="Enter your name"
+									autocomplete="name" minlength="2" title="Please enter your full name." required>
+							</div>
+							<div class="form-tile">
+								<label for="username" class="degular-medium">Username*</label>
+								<input type="text" id="username" name="username" placeholder="Enter your username"
+									pattern="[A-Za-z0-9]{3,20}"
+									title="Username must contain only letters and numbers, and be 3-20 characters long."
+									required>
+							</div>
+							<div class="form-tile">
+								<label for="email" class="degular-medium">Email*</label>
+								<input type="email" id="email" name="email" placeholder="Enter your email"
+									autocomplete="email" required>
+							</div>
+							<div class="form-tile">
+								<label for="pnumber" class="degular-medium">Phone Number*</label>
+								<input type="tel" id="pnumber" name="pnumber" placeholder="Enter your phone number"
+									autocomplete="tel" pattern="[0-9+\-\s()]{6,20}" maxlength="20" minlength="6"
+									title="Please enter a valid phone number. It must be between 6 and 20 characters and can include numbers, spaces, +, -, and parentheses."
+									required>
+							</div>
+							<div class="form-tile">
+								<label for="password" class="degular-medium">Password*</label>
+								<input type="password" id="password" name="password" placeholder="Create a password"
+									onChange="onChange()" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+									title="Password must be at least 8 characters long, and contain at least one number, one uppercase letter, and one lowercase letter."
+									required>
+							</div>
+							<div class="form-tile">
+								<label for="confirm_password" class="degular-medium">Confirm Password*</label>
+								<input type="password" id="confirm_password" name="confirm_password"
+									placeholder="Re-enter your password" onChange="onChange()"
+									pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+									title="Password must be at least 8 characters long, and contain at least one number, one uppercase letter, and one lowercase letter."
+									required>
+							</div>
+						</div>
+						<div class="radio-input">
+							<p class="degular-medium">Gender</p>
+							<div class="form-tile flex flex-wrap gap-20">
+								<span class="flex align-items-center">
+									<input type="radio" id="female" name="gender">
+									<label for="female">Female</label>
+								</span>
+								<span class="flex align-items-center">
+									<input type="radio" id="male" name="gender">
+									<label for="male">Male</label>
+								</span>
+								<span class="flex align-items-center">
+									<input type="radio" id="no_gender" name="gender">
+									<label for="no_gender">Prefer not to say</label>
+								</span>
+								<span class="flex align-items-center">
+									<input type="radio" id="other_gender" name="gender">
+									<label for="other_gender">Other</label>
+									<input type="text" id="other_gender_field" name="gender">
+								</span>
+							</div>
+						</div>
+						<div class="submit-input flex align-items-center justify-content-center">
+							<div class="gradient"><input type="submit" value="Register"></div>
+						</div>
+						<span>
+                            <p>Already have an account? <span class="nowrap"><a class="underline" href="/portfolio/login.html">Login instead</a>.</span></p>
+                            </p>
+                        </span>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div id="footer-placeholder"></div>
+	</div>
+</body>
+
+</html>

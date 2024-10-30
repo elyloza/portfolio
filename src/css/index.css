@@ -1,0 +1,472 @@
+/* BANNER */
+#banner {
+    width: 100%;
+    height: 100vh;
+    animation: gradient 6s ease infinite;
+    background: linear-gradient(90deg,
+            rgba(211, 117, 114, 0.5),
+            rgba(243, 217, 192, 0.7) 100%),
+        linear-gradient(30deg,
+            rgba(211, 117, 114, 0.6),
+            rgba(243, 217, 192, 0.8) 100%);
+    background-size: 300% 300%;
+    color: white;
+}
+
+.hello {
+    display: flex;
+    justify-content: center;
+    width: 80vw;
+    height: 100%;
+    max-height: 300px;
+    margin: 0 30px;
+    padding: 0;
+}
+
+.hello span img {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    padding: 3px;
+}
+
+.hello-fadeup span {
+    display: inline-block;
+    animation: fadeInOutUp 3s ease-in infinite;
+}
+
+.hello-fadeup span:nth-child(2) {
+    animation-delay: 0.08s;
+}
+
+.hello-fadeup span:nth-child(3) {
+    animation-delay: 0.16s;
+}
+
+.hello-fadeup span:nth-child(4) {
+    animation-delay: 0.24s;
+}
+
+.hello-fadeup span:nth-child(5) {
+    animation-delay: 0.32s;
+}
+
+.hello-fadeup span:nth-child(6) {
+    animation-delay: 0.40s;
+}
+
+#banner .about {
+    text-align: center;
+}
+
+#banner .about h1 {
+    font-size: clamp(28px, 5vw, 45px);
+}
+
+#banner .about h2 {
+    font-size: clamp(20px, 4vw, 32px);
+    font-style: italic;
+    margin: 10px 0 5px 0;
+}
+
+#banner .about p,
+#banner .about a {
+    margin: 0;
+    color: white;
+    font-size: clamp(20px, 3.9vw, 32px) !important;
+}
+
+#banner a.underline::after {
+    height: 3px;
+    bottom: -10px;
+    background-color: white;
+}
+
+#banner .arrow {
+    position: absolute;
+    bottom: 80px;
+}
+
+#banner .arrow img {
+    width: 100%;
+    height: 65px;
+}
+
+#about {
+    width: 100%;
+    padding: 150px 30px 30px 30px;
+}
+
+#works,
+#contact {
+    width: 100%;
+    padding: 30px;
+    scroll-margin-top: 110px;
+}
+
+#contact {
+    grid-template-columns: 0.8fr 1.2fr;
+    margin: 0 30px 60px 30px;
+    border-radius: 30px;
+    background-color: white;
+}
+
+.contact-left {
+    padding: 40px;
+}
+
+/* CARDS */
+#cards {
+    margin: 20px 0 30px 0;
+}
+
+.card-container {
+    width: 100%;
+}
+
+.card-container:after {
+    content: 'flickity';
+    display: none;
+}
+
+.card {
+    width: calc((100% - 25px) / 3);
+    max-height: 255px;
+    aspect-ratio: 16/9;
+    margin: 0;
+    border-radius: 30px;
+    background: var(--gradient-lighter);
+    overflow: hidden;
+}
+
+.card:nth-child(2) {
+    margin: 0 10px;
+}
+
+.card:hover,
+.card:focus {
+    box-shadow: rgba(var(--primary), .3) 0px -90px 60px -30px inset;
+}
+
+.card a {
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+    color: rgba(var(--dark-gray));
+}
+
+.card h3 {
+    width: 100%;
+    font-size: 34px;
+}
+
+.card span {
+    width: 100%;
+}
+
+.card p {
+    margin: 0;
+    font-size: 24px;
+    line-height: 20px;
+}
+
+.card i {
+    width: 17px;
+    height: 15px;
+    margin-left: 10px;
+    font-size: 17px;
+}
+
+.card:hover i,
+.card:focus i {
+    margin-left: 20px;
+}
+
+/* FLICKITY */
+.flickity-viewport {
+    height: 100%;
+}
+
+.flickity-button {
+    background: rgba(255, 255, 255, .5);
+    backdrop-filter: blur(10px);
+    transition: all .3s ease;
+}
+
+.flickity-button:hover,
+.flickity-button:focus {
+    background: rgba(255, 255, 255, .8);
+}
+
+.flickity-button:focus {
+    outline: 2px dotted rgb(var(--primary));
+    box-shadow: none;
+}
+
+.flickity-button:disabled {
+    opacity: 0.2;
+}
+
+.flickity-prev-next-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 30px;
+}
+
+.flickity-prev-next-button.next {
+    right: -20px;
+}
+
+.flickity-prev-next-button.previous {
+    left: -20px;
+}
+
+.flickity-button-icon {
+    fill: rgb(var(--dark-gray));
+}
+
+.flickity-prev-next-button .flickity-button-icon {
+    width: 16px;
+    height: 16px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.flickity-page-dots .dot.is-selected {
+    background: rgba(var(--dark-gray), 1);
+}
+
+/* CONTACT FORM */
+.contact-form {
+    margin: 15px 15px 15px 40px;
+}
+
+.text-input {
+    grid-template-columns: 1fr 1fr;
+}
+
+.text-input input,
+.message-input textarea {
+    width: 100%;
+    padding: 30px;
+    border-radius: 24px;
+    border: 1px solid rgba(var(--primary), 0);
+    background: var(--gradient-lightest);
+    font-family: var(--degular-regular);
+    font-size: 18px;
+    color: rgb(var(--dark-gray));
+    overflow: auto;
+    outline: none;
+    transition: all .3s ease;
+}
+
+.text-input input::placeholder,
+.message-input textarea::placeholder {
+    color: rgba(var(--dark-gray), .8);
+}
+
+.text-input input:focus,
+.message-input textarea:focus {
+    border: 1px solid rgba(var(--primary), .4);
+}
+
+.message-input textarea {
+    resize: vertical;
+}
+
+.submit-input .gradient {
+    position: relative;
+    width: 30%;
+}
+
+.submit-input .gradient {
+    z-index: 0;
+}
+
+.submit-input .gradient::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 30px;
+    padding: 3px;
+    background: var(--gradient-regular);
+    mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    -webkit-mask-composite: xor;
+    z-index: -1;
+}
+
+.submit-input input {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 30px;
+    background: var(--gradient-regular);
+    font-family: var(--degular-medium);
+    font-size: 19px;
+    color: white;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.submit-input input:hover,
+.submit-input input:focus {
+    background: var(--gradient-regular);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+
+/* MOBILE VIEW */
+@media screen and (min-width: 0px) and (max-width: 767px) {
+
+    /* BANNER */
+    .hello {
+        max-height: 150px;
+    }
+
+    #about {
+        padding: 100px 40px 20px 40px;
+    }
+
+    #works,
+    #contact {
+        padding: 20px 40px;
+        scroll-margin-top: 80px;
+    }
+
+    #contact {
+        grid-template-columns: 1fr;
+        background-color: transparent;
+        margin: 0;
+        padding-bottom: 60px;
+        border-radius: 0;
+    }
+
+    .contact-left {
+        padding: 0;
+    }
+
+    /* CARDS */
+    .card {
+        width: 100%;
+    }
+
+    .card a {
+        padding: 25px;
+    }
+
+    .card h3 {
+        font-size: 26px;
+    }
+
+    .card p {
+        font-size: 20px;
+    }
+
+    .card i {
+        width: 16px;
+        height: 14px;
+        font-size: 16px;
+    }
+
+    /* FORM */
+    .contact-form {
+        margin: 15px 0;
+    }
+
+    .text-input {
+        grid-template-columns: 1fr;
+    }
+
+    .text-input input,
+    .message-input textarea {
+        padding: 20px;
+        border-radius: 20px;
+        font-size: 16px;
+    }
+
+    .submit-input input {
+        margin-top: 0;
+        font-size: 17px;
+    }
+
+    .submit-input .gradient {
+        width: 100%;
+    }
+}
+
+
+/* TABLET VIEW + SMALL SCREENS */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    #about {
+        padding: 120px 60px 30px 60px;
+    }
+
+    #works,
+    #contact {
+        padding: 30px 60px;
+        scroll-margin-top: 90px;
+    }
+
+    .card {
+        width: calc((100% - 10px) / 2);
+    }
+
+    .card a {
+        padding: 30px;
+    }
+
+    .card h3 {
+        font-size: 30px;
+    }
+
+    .card p {
+        font-size: 26px;
+    }
+
+    .card i {
+        width: 18px;
+        height: 16px;
+        font-size: 18px;
+    }
+
+    #contact {
+        grid-template-columns: 1fr;
+        background-color: transparent;
+        margin: 0;
+        padding-bottom: 80px;
+        border-radius: 0;
+    }
+
+    .contact-left {
+        padding: 0;
+    }
+
+    .contact-form {
+        margin: 15px 0;
+    }
+
+    .submit-input .gradient {
+        width: 40%;
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+    #banner .arrow {
+        bottom: 50px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .card-container:after {
+        content: '';
+    }
+}

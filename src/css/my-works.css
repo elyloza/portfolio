@@ -1,0 +1,87 @@
+#works {
+    width: 100%;
+    padding: 150px 30px 60px 30px;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+#works a {
+    color: rgba(var(--dark-gray), 1);
+}
+
+#works a.underline::after {
+    background-color: rgba(var(--dark-gray), 1);
+}
+
+c {
+    display: inline-block;
+    margin: 0;
+    padding: 2px 5px;
+    border-radius: 5px;
+    background-color: rgba(var(--primary), .2);
+    font-family:'Courier New', Courier, monospace;
+    font-size: 17px;
+    line-height: 17px;
+    letter-spacing: -1px;
+}
+
+.codepen-viewer {
+    width: 100%;
+    max-width: 850px;
+    margin: auto;
+}
+
+.pages {
+    padding-top: 20px;
+    color: rgba(var(--dark-gray), 1);
+}
+
+.pages a i {
+    width: 15px;
+    height: 15px;
+    font-size: 15px;
+}
+
+.pages a.left i {
+    margin-right: 3px;
+    text-align: left;
+}
+
+.pages a.left:hover i {
+    margin-right: 9px;
+}
+
+.pages a.right i {
+    margin-left: 3px;
+    text-align: right;
+}
+
+.pages a.right:hover i {
+    margin-left: 9px;
+}
+
+@media screen and (min-width: 0px) and (max-width: 767px) {
+    c {
+        font-size: 15px;
+    }
+    
+    #works {
+        padding: 100px 40px 40px 40px;
+    }
+
+    .pages a {
+        font-size: 16px;
+    }
+
+    .pages a i {
+        width: 13px;
+        height: 13px;
+        font-size: 13px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    #works {
+        padding: 120px 60px 50px 60px;
+    }
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ely Loza</title>
+  <link rel="icon" type="image/x-icon" href="./src/img/favicon.svg" />
+  <link rel="stylesheet" href="./src/css/flickity.min.css" />
+  <link rel="stylesheet" href="./src/css/style.css" />
+  <link rel="stylesheet" href="./src/css/index.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="./src/js/flickity.pkgd.min.js"></script>
+  <script src="https://kit.fontawesome.com/312f6279de.js" crossorigin="anonymous"></script>
+  <script src="./src/js/script.js"></script>
+  <script src="./src/js/index.js"></script>
+</head>
+
+<body>
+  <div id="navigation-placeholder"></div>
+  <div class="wrapper flex align-items-center justify-content-center flex-wrap">
+    <div id="banner" class="flex align-items-center justify-content-center flex-column gap-20">
+      <div class="hello hello-fadeup">
+        <span><img src="./src/img/hello/h.svg" /></span><span><img src="./src/img/hello/e.svg" /></span><span><img
+            src="./src/img/hello/l.svg" /></span><span><img src="./src/img/hello/l.svg" /></span><span><img
+            src="./src/img/hello/o.svg" /></span><span><img src="./src/img/hello/exclamation.svg" /></span>
+      </div>
+      <div class="about">
+        <h1 class="degular-semibold">I'm Ely Loza</h1>
+        <h2 class="ivypresto-lightitalic">Content Editor & Campus+ Trainer</h2>
+        <p class="degular-medium">at <a class="underline" href="https://www.crescendocollective.com"
+            target="_blank">Crescendo Collective</a>.
+        </p>
+      </div>
+      <a class="arrow bounce" href="#about"><img src="./src/img/down-arrow.svg" /></a>
+    </div>
+    <div id="content" class="flex align-items-center justify-content-center flex-row flex-wrap">
+      <div id="about" class="flex flex-column gap-20">
+        <h2>A <i>little more</i> about me...</h2>
+        <div class="info">
+          <p>As a <b>Content Editor</b> and <b>Campus+ Trainer</b> for Crescendo Collective, I spend my days crafting
+            <b>clear, engaging materials</b> that empower our clients to navigate the <b>Magnolia CMS</b>.
+          </p>
+          <p>By night (and honestly, all day long), I'm a proud cat mom to <i class="fa-solid fa-cat"></i> <b>13 fluffy
+              overlords</b>, who remind me that work-life balance is key—especially when treats are involved!</p>
+          <p>Alongside my regular work, I'm diving into <b>frontend development and UI/UX training</b>, taking on new
+            challenges
+            one step (and one purr) at a time. Passionate about learning, sharing knowledge, and all things feline!
+          </p>
+        </div>
+      </div>
+      <div id="works" class="flex flex-column">
+        <h2>Some of <i>my works</i></h2>
+        <div class="info">
+          <p>Take a look at some of the activities I have completed during our training sessions.</p>
+        </div>
+        <div id="cards">
+          <div class="card-container js-flickity" data-flickity='{
+            	"watchCSS": true,
+            	"freeScroll": true,
+            	"contain": true,
+            	"imagesLoaded": true,
+            	"adaptiveHeight": true,
+            	"arrowShape": "m18 55c-2.8-2.7-2.8-7.3 0-10.1l42.8-42.8c2.8-2.8 7.3-2.8 10.1 0 2.8 2.8 2.8 7.3 0 10.1l-37.8 37.8 37.8 37.8c2.8 2.8 2.8 7.3 0 10.1-2.8 2.8-7.3 2.8-10.1 0l-42.9-42.8z"
+      	    }'>
+            <div class="card inline-flex ease-3">
+              <a class="flex align-content-between flex-wrap" href="./my-works/navigation.html">
+                <h3>Navigation menu</h3>
+                <span class="flex align-items-center">
+                  <p class="degular-medium">See the activity</p><i class="fa-solid fa-arrow-right ease-3"></i>
+                </span>
+              </a>
+            </div>
+            <div class="card inline-flex ease-3">
+              <a class="flex align-content-between flex-wrap" href="./my-works/positioning.html">
+                <h3>Display / Positioning</h3>
+                <span class="flex align-items-center">
+                  <p class="degular-medium">See the activity</p><i class="fa-solid fa-arrow-right ease-3"></i>
+                </span>
+              </a>
+            </div>
+            <div class="card inline-flex ease-3">
+              <a class="flex align-content-between flex-wrap" href="./my-works/pseudo.html">
+                <h3>Pseudo-elements</h3>
+                <span class="flex align-items-center">
+                  <p class="degular-medium">See the activity</p><i class="fa-solid fa-arrow-right ease-3"></i>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="contact" class="grid ease-5">
+        <div class="contact-left">
+          <h2>Get in <i>touch</i></h2>
+          <div class="info">
+            <p>Fill out the form to reach out for collaborations or inquiries—just kidding! None of the forms here,
+              including the Login and Registration forms, are functional; they're just part of our training exercise.
+            </p>
+          </div>
+        </div>
+        <form action="#">
+          <div class="contact-form grid gap-20">
+            <div class="text-input grid gap-20">
+              <input type="text" id="Name" placeholder="Name*" autocomplete="name" required>
+              <input type="email" id="Email" placeholder="Email*" autocomplete="email" required>
+            </div>
+            <div class="message-input grid">
+              <textarea name="message" rows="9" placeholder="Enter your message"></textarea>
+            </div>
+            <div class="submit-input flex align-items-center justify-content-center">
+              <div class="gradient"><input type="submit" value="Submit"></div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div id="footer-placeholder"></div>
+  </div>
+</body>
+
+</html>
